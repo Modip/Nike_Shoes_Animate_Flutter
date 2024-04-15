@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nikeanim/data.dart';
+import 'package:nikeanim/screens/animate_button.dart';
 
 class AnimateScreen extends StatefulWidget {
   const AnimateScreen({super.key});
@@ -17,22 +18,11 @@ class _AnimateScreenState extends State<AnimateScreen> {
       backgroundColor: Colors.grey.shade200,
       body: Stack(
         children: [
-          Positioned(
-            bottom: 10,
+          const Positioned(
+            bottom: 20,
             left: 25,
             right: 25,
-            child: Container(
-              width: 50,
-              height: 60,
-              decoration: BoxDecoration(
-                  color: Colors.black, borderRadius: BorderRadius.circular(18)),
-              child: const Center(
-                child: Text(
-                  "Add to list",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
+            child: Center(child: ButtonStates()),
           ),
           Positioned(
             top: 0,
@@ -116,7 +106,7 @@ class _AnimateScreenState extends State<AnimateScreen> {
                             ),
                           )),
                       Positioned(
-                        bottom: 110,
+                        bottom: 70,
                         left: 10,
                         right: 10,
                         child: Column(
@@ -132,7 +122,7 @@ class _AnimateScreenState extends State<AnimateScreen> {
                                       color: Colors.black),
                                 ),
                                 Text(
-                                  "\$ " + snicker.price,
+                                  "\$${snicker.price}",
                                   style: const TextStyle(
                                       fontSize: 25,
                                       fontWeight: FontWeight.w400,
@@ -149,7 +139,7 @@ class _AnimateScreenState extends State<AnimateScreen> {
                         ),
                       ),
                       Positioned(
-                        bottom: 20,
+                        bottom: 5,
                         left: 10,
                         right: 10,
                         child: Row(
